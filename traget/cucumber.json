@@ -1,0 +1,297 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "line": 4,
+        "name": "Search items and validate results",
+        "description": "",
+        "id": "search-and-place-order;search-items-and-validate-results",
+        "after": [
+          {
+            "result": {
+              "duration": 132645800,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.AfterTest1()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 17553832700,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "User is on the application Landing page",
+            "match": {
+              "location": "SearchDefination.user_is_on_the_application_landing_page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 3263425700,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "User search for Cucumber Vegetable",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Cucumber",
+                  "offset": 16
+                }
+              ],
+              "location": "SearchDefination.user_search_for_something_vegetable(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 31274200,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "\"Cucumber\" results are displayed",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Cucumber",
+                  "offset": 1
+                }
+              ],
+              "location": "SearchDefination.something_results_are_displayed(String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 3,
+            "name": "@Test1"
+          }
+        ]
+      },
+      {
+        "line": 19,
+        "name": "Search for items and then move to checkout page",
+        "description": "",
+        "id": "search-and-place-order;search-for-items-and-then-move-to-checkout-page;;2",
+        "after": [
+          {
+            "result": {
+              "duration": 99175600,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.AfterTest2()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 16714353200,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "User is on the application Landing page",
+            "match": {
+              "location": "SearchDefination.user_is_on_the_application_landing_page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 3240360100,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "User search for Brinjal Vegetable",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Brinjal",
+                  "offset": 16
+                }
+              ],
+              "location": "SearchDefination.user_search_for_something_vegetable(String)"
+            },
+            "matchedColumns": [
+              0
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 168051300,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "Added items to cart",
+            "match": {
+              "location": "SearchDefination.added_items_to_cart()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 155091100,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "User proceeded to checkout page for purchase",
+            "match": {
+              "location": "SearchDefination.user_proceeded_to_checkout_page_for_purchase()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 30281400,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "verify selected Brinjal items are displayed in checkout page",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Brinjal",
+                  "offset": 16
+                }
+              ],
+              "location": "SearchDefination.verify_selected_items_are_displayed_in_checkout_page(String)"
+            },
+            "matchedColumns": [
+              0
+            ],
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 9,
+            "name": "@Test2"
+          }
+        ]
+      },
+      {
+        "line": 20,
+        "name": "Search for items and then move to checkout page",
+        "description": "",
+        "id": "search-and-place-order;search-for-items-and-then-move-to-checkout-page;;3",
+        "after": [
+          {
+            "result": {
+              "duration": 98383800,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.AfterTest2()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 16301195100,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "User is on the application Landing page",
+            "match": {
+              "location": "SearchDefination.user_is_on_the_application_landing_page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 3240190700,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "User search for Beetroot Vegetable",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Beetroot",
+                  "offset": 16
+                }
+              ],
+              "location": "SearchDefination.user_search_for_something_vegetable(String)"
+            },
+            "matchedColumns": [
+              0
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 171169600,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "Added items to cart",
+            "match": {
+              "location": "SearchDefination.added_items_to_cart()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 154941600,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "User proceeded to checkout page for purchase",
+            "match": {
+              "location": "SearchDefination.user_proceeded_to_checkout_page_for_purchase()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 29639000,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "verify selected Beetroot items are displayed in checkout page",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Beetroot",
+                  "offset": 16
+                }
+              ],
+              "location": "SearchDefination.verify_selected_items_are_displayed_in_checkout_page(String)"
+            },
+            "matchedColumns": [
+              0
+            ],
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 9,
+            "name": "@Test2"
+          }
+        ]
+      }
+    ],
+    "name": "Search and Place order",
+    "description": "",
+    "id": "search-and-place-order",
+    "keyword": "Feature",
+    "uri": "Search.feature"
+  }
+]

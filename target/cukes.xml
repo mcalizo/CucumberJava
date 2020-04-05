@@ -1,12 +1,32 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="3" time="61.384011">
-<testcase classname="Search and Place order" name="Search items and validate results" time="20.981178">
+<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="5" time="165.512655">
+<testcase classname="Purchasing Items from Search to Place order" name="Proceed to placing order page" time="46.804703">
+<system-out><![CDATA[Given User is on the application Landing page...............................passed
+When User search for Almonds Vegetable......................................passed
+And Added items to cart.....................................................passed
+And User proceeded to checkout page for purchase............................passed
+Then verify selected Almonds items are displayed in checkout page...........passed
+And User proceeded to place order page......................................passed
+Then verify that the vegetables are successfully purchased..................passed
+]]></system-out>
+</testcase>
+<testcase classname="Purchasing Items from Search to Place order" name="Proceed to placing order page 2" time="45.125846">
+<system-out><![CDATA[Given User is on the application Landing page...............................passed
+When User search for Walnuts Vegetable......................................passed
+And Added items to cart.....................................................passed
+And User proceeded to checkout page for purchase............................passed
+Then verify selected Walnuts items are displayed in checkout page...........passed
+And User proceeded to place order page......................................passed
+Then verify that the vegetables are successfully purchased..................passed
+]]></system-out>
+</testcase>
+<testcase classname="Search and Place order" name="Search items and validate results" time="22.294865">
 <system-out><![CDATA[Given User is on the application Landing page...............................passed
 When User search for Cucumber Vegetable.....................................passed
 Then "Cucumber" results are displayed.......................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Search and Place order" name="Search for items and then move to checkout page" time="20.407313">
+<testcase classname="Search and Place order" name="Search for items and then move to checkout page" time="25.625706">
 <system-out><![CDATA[Given User is on the application Landing page...............................passed
 When User search for Brinjal Vegetable......................................passed
 And Added items to cart.....................................................passed
@@ -14,7 +34,7 @@ And User proceeded to checkout page for purchase............................pass
 Then verify selected Brinjal items are displayed in checkout page...........passed
 ]]></system-out>
 </testcase>
-<testcase classname="Search and Place order" name="Search for items and then move to checkout page 2" time="19.99552">
+<testcase classname="Search and Place order" name="Search for items and then move to checkout page 2" time="25.661535">
 <system-out><![CDATA[Given User is on the application Landing page...............................passed
 When User search for Beetroot Vegetable.....................................passed
 And Added items to cart.....................................................passed

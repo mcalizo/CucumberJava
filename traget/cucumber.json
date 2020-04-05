@@ -3,6 +3,274 @@
     "line": 1,
     "elements": [
       {
+        "line": 15,
+        "name": "Proceed to placing order page",
+        "description": "",
+        "id": "purchasing-items-from-search-to-place-order;proceed-to-placing-order-page;;2",
+        "after": [
+          {
+            "result": {
+              "duration": 4323288000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.AfterTest3()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 17432173600,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "User is on the application Landing page",
+            "match": {
+              "location": "SearchDefination.user_is_on_the_application_landing_page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 3228634501,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "User search for Almonds Vegetable",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Almonds",
+                  "offset": 16
+                }
+              ],
+              "location": "SearchDefination.user_search_for_something_vegetable(String)"
+            },
+            "matchedColumns": [
+              0
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 3154504800,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "Added items to cart",
+            "match": {
+              "location": "SearchDefination.added_items_to_cart()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 3144695200,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "User proceeded to checkout page for purchase",
+            "match": {
+              "location": "SearchDefination.user_proceeded_to_checkout_page_for_purchase()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 26654800,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "verify selected Almonds items are displayed in checkout page",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Almonds",
+                  "offset": 16
+                }
+              ],
+              "location": "SearchDefination.verify_selected_items_are_displayed_in_checkout_page(String)"
+            },
+            "matchedColumns": [
+              0
+            ],
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 5142077900,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "User proceeded to place order page",
+            "match": {
+              "location": "PlaceOrderDefination.user_proceeded_to_place_order_page()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 10352674400,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "verify that the vegetables are successfully purchased",
+            "match": {
+              "location": "PlaceOrderDefination.verify_that_the_vegetables_are_successfully_purchased()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 3,
+            "name": "@Test3"
+          }
+        ]
+      },
+      {
+        "line": 16,
+        "name": "Proceed to placing order page",
+        "description": "",
+        "id": "purchasing-items-from-search-to-place-order;proceed-to-placing-order-page;;3",
+        "after": [
+          {
+            "result": {
+              "duration": 4099212501,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.AfterTest3()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 16081292200,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "User is on the application Landing page",
+            "match": {
+              "location": "SearchDefination.user_is_on_the_application_landing_page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 3200411001,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "User search for Walnuts Vegetable",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Walnuts",
+                  "offset": 16
+                }
+              ],
+              "location": "SearchDefination.user_search_for_something_vegetable(String)"
+            },
+            "matchedColumns": [
+              0
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 3151149800,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "Added items to cart",
+            "match": {
+              "location": "SearchDefination.added_items_to_cart()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 3146956200,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "User proceeded to checkout page for purchase",
+            "match": {
+              "location": "SearchDefination.user_proceeded_to_checkout_page_for_purchase()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 26163500,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "verify selected Walnuts items are displayed in checkout page",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Walnuts",
+                  "offset": 16
+                }
+              ],
+              "location": "SearchDefination.verify_selected_items_are_displayed_in_checkout_page(String)"
+            },
+            "matchedColumns": [
+              0
+            ],
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 5123509900,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "User proceeded to place order page",
+            "match": {
+              "location": "PlaceOrderDefination.user_proceeded_to_place_order_page()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 10297151100,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "verify that the vegetables are successfully purchased",
+            "match": {
+              "location": "PlaceOrderDefination.verify_that_the_vegetables_are_successfully_purchased()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 3,
+            "name": "@Test3"
+          }
+        ]
+      }
+    ],
+    "name": "Purchasing Items from Search to Place order",
+    "description": "",
+    "id": "purchasing-items-from-search-to-place-order",
+    "keyword": "Feature",
+    "uri": "PlaceOrder.feature"
+  },
+  {
+    "line": 1,
+    "elements": [
+      {
         "line": 4,
         "name": "Search items and validate results",
         "description": "",
@@ -10,7 +278,7 @@
         "after": [
           {
             "result": {
-              "duration": 132645800,
+              "duration": 87916399,
               "status": "passed"
             },
             "match": {
@@ -23,7 +291,7 @@
         "steps": [
           {
             "result": {
-              "duration": 17553832700,
+              "duration": 15973655199,
               "status": "passed"
             },
             "line": 5,
@@ -35,7 +303,7 @@
           },
           {
             "result": {
-              "duration": 3263425700,
+              "duration": 3206663400,
               "status": "passed"
             },
             "line": 6,
@@ -53,7 +321,7 @@
           },
           {
             "result": {
-              "duration": 31274200,
+              "duration": 3026629600,
               "status": "passed"
             },
             "line": 7,
@@ -85,7 +353,7 @@
         "after": [
           {
             "result": {
-              "duration": 99175600,
+              "duration": 79776599,
               "status": "passed"
             },
             "match": {
@@ -98,7 +366,7 @@
         "steps": [
           {
             "result": {
-              "duration": 16714353200,
+              "duration": 15991426801,
               "status": "passed"
             },
             "line": 11,
@@ -110,7 +378,7 @@
           },
           {
             "result": {
-              "duration": 3240360100,
+              "duration": 3211279599,
               "status": "passed"
             },
             "line": 12,
@@ -131,7 +399,7 @@
           },
           {
             "result": {
-              "duration": 168051300,
+              "duration": 3168649400,
               "status": "passed"
             },
             "line": 13,
@@ -143,7 +411,7 @@
           },
           {
             "result": {
-              "duration": 155091100,
+              "duration": 3145579700,
               "status": "passed"
             },
             "line": 14,
@@ -155,7 +423,7 @@
           },
           {
             "result": {
-              "duration": 30281400,
+              "duration": 28993599,
               "status": "passed"
             },
             "line": 15,
@@ -190,7 +458,7 @@
         "after": [
           {
             "result": {
-              "duration": 98383800,
+              "duration": 73398500,
               "status": "passed"
             },
             "match": {
@@ -203,7 +471,7 @@
         "steps": [
           {
             "result": {
-              "duration": 16301195100,
+              "duration": 16011130100,
               "status": "passed"
             },
             "line": 11,
@@ -215,7 +483,7 @@
           },
           {
             "result": {
-              "duration": 3240190700,
+              "duration": 3238212300,
               "status": "passed"
             },
             "line": 12,
@@ -236,7 +504,7 @@
           },
           {
             "result": {
-              "duration": 171169600,
+              "duration": 3162402499,
               "status": "passed"
             },
             "line": 13,
@@ -248,7 +516,7 @@
           },
           {
             "result": {
-              "duration": 154941600,
+              "duration": 3150477200,
               "status": "passed"
             },
             "line": 14,
@@ -260,7 +528,7 @@
           },
           {
             "result": {
-              "duration": 29639000,
+              "duration": 25914000,
               "status": "passed"
             },
             "line": 15,

@@ -41,6 +41,7 @@ public class SearchDefination extends Base{
     public void something_results_are_displayed(String strArg1) throws Throwable {
     	System.out.println("Results are displayed");
     Assert.assertTrue(h.getProductName().getText().contains(strArg1));
+    Thread.sleep(3000);
    
     }
     
@@ -57,6 +58,7 @@ public class SearchDefination extends Base{
     	System.out.println("Items are added to cart");
         h.getAmount().click();
         h.getToCart().click();
+        Thread.sleep(3000);
         }
 
     @And("^User proceeded to checkout page for purchase$")
@@ -65,6 +67,7 @@ public class SearchDefination extends Base{
     	ct=new CartPage(driver);
         ct.getToCart().click();
         ct.getoCheckOut().click();
+        Thread.sleep(3000);
         
     }
 

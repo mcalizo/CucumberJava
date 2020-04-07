@@ -32,7 +32,7 @@ Then verify the cart is empty
 Scenario:
 Given User is on the application Landing page
 When User clicks the Top deals 
-Then Top deals items will displayed  
+Then User go back to the greenkart homepage     
 
 
 

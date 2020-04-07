@@ -110,28 +110,31 @@ public class SearchDefination extends Base{
         driver.switchTo().window(childWindow);
         
         System.out.println("The title of the child window :" + driver.getTitle());
-              
-    }
-    
-
-    
-    @Then("^Top deals items will displayed$")
-    public void top_deals_items_will_displayed() throws Throwable {
-    	System.out.println("Top deals items are displayed");
-    	td=new TopDealsPage(driver);
+        
+        td=new TopDealsPage(driver);
     	td.getApple().isDisplayed();
     	td.getCarrot().isDisplayed();
     	td.getMango().isDisplayed();
     	td.getOrange().isDisplayed();
     	td.getPotato().isDisplayed();
     	td.getTomato().isDisplayed();
+    	Thread.sleep(5000);
+    	driver.close();
     	
-    	
+    	driver.switchTo().window(mainWindow);
     	System.out.println("The title of the main window :" + driver.getTitle());
-    
-    		
-    	
     }
+    
+    @Then("^User go back to the greenkart homepage$")
+    public void user_go_back_to_the_greenkart_homepage() throws Throwable {
+    	System.out.println("User go back to the greenkart homepage");
+    	h=new HomePage(driver);
+        Assert.assertTrue(h.getLogo().getText().contains("GREENKART"));
+    }
+     	
+  		
+    	
+    
         
 
 }

@@ -51,4 +51,18 @@ By AddToCart=By.xpath("//button[contains(text(),'ADD TO CART')]");
 	{
 		return driver.findElement(AddToCart);
 	}
+	
+By EmptyCart=By.xpath("//a[@class='cart-icon']");
+
+	public WebElement getEmptyCart()
+	{
+		return driver.findElement(EmptyCart);
+	}
+	
+By TopDeals=By.xpath("//a[contains(text(),'Top Deals')]");
+
+	public WebElement getTopDeals()
+	{
+		return driver.findElement(TopDeals);
+	}
 }

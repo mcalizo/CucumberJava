@@ -26,4 +26,18 @@ public class Hooks extends Base{
 		driver.close();
 		
 	}
+	
+	@After("@Test4")
+	public void AfterTest4()
+	{
+		driver.close();
+		
+	}
+	
+	@After("@Test5")
+	public void AfterTest5()
+	{
+		driver.close();
+		
+	}
 }

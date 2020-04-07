@@ -12,6 +12,7 @@ import com.myproject.app.Base;
 import Pages.CartPage;
 import Pages.CheckOutPage;
 import Pages.HomePage;
+import Pages.TopDealsPage;
 
 @RunWith(Cucumber.class)
 public class SearchDefination extends Base{
@@ -19,6 +20,7 @@ public class SearchDefination extends Base{
 	HomePage h;
 	CartPage ct;
 	CheckOutPage cp;
+	TopDealsPage td;
 	 
 	
     @Given("^User is on the application Landing page$")
@@ -70,5 +72,7 @@ public class SearchDefination extends Base{
         Thread.sleep(3000);
         
     }
+    
+        
 
 }

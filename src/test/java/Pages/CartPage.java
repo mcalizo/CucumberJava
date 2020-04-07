@@ -20,7 +20,7 @@ By ClickCart=By.xpath("//a[@class='cart-icon']//img[contains(@class,'')]");
 		return driver.findElement(ClickCart);
 	}	
 	
-	By ProceedtoCheckOut=By.xpath("//button[contains(text(),'PROCEED TO CHECKOUT')]");
+By ProceedtoCheckOut=By.xpath("//button[contains(text(),'PROCEED TO CHECKOUT')]");
 
 	public WebElement getoCheckOut()
 	{
@@ -28,5 +28,11 @@ By ClickCart=By.xpath("//a[@class='cart-icon']//img[contains(@class,'')]");
 	
 	}
 	
+By EmptyCart=By.xpath("//div[@class='cart-preview active']//div//div//h2[contains(text(),'You cart is empty!')]");
+
+	public WebElement getEmptyCart()
+	{
+		return driver.findElement(EmptyCart);
+	}
 	
 }

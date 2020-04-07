@@ -34,6 +34,12 @@ Given User is on the application Landing page
 When User clicks the Top deals 
 Then User go back to the greenkart homepage     
 
+@Test6
+Scenario:
+Given User is on the application Landing page
+When User clicks the flight booking link  
+Then User go back to the greenkart homepage 
+
 
 
 

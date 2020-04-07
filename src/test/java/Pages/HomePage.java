@@ -65,4 +65,11 @@ By TopDeals=By.xpath("//a[contains(text(),'Top Deals')]");
 	{
 		return driver.findElement(TopDeals);
 	}
+	
+By BookingLink=By.xpath("//a[contains(text(),'Flight Booking')]");
+
+	public WebElement getLink()
+	{
+		return driver.findElement(BookingLink);
+	}
 }

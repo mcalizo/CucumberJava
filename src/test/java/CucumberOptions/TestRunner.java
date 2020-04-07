@@ -8,7 +8,8 @@ import cucumber.api.junit.Cucumber;
 @CucumberOptions(
 		features = "src/test/java/features",
 		glue="StepDefinations",strict=true,monochrome = true,
-		plugin= {"pretty","html:target/cucumber","json:traget/cucumber.json","junit:target/cukes.xml"})
+		plugin= {"pretty","html:target/cucumber","json:traget/cucumber.json","junit:target/cukes.xml", 
+				"com.cucumber.listener.ExtentCucumberFormatter:target/report.html"})
 
 		
 

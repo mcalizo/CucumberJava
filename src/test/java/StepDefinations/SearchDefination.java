@@ -15,6 +15,7 @@ import com.myproject.app.Base;
 
 import Pages.CartPage;
 import Pages.CheckOutPage;
+import Pages.FlightBookingPage;
 import Pages.HomePage;
 import Pages.TopDealsPage;
 
@@ -25,6 +26,7 @@ public class SearchDefination extends Base{
 	CartPage ct;
 	CheckOutPage cp;
 	TopDealsPage td;
+	FlightBookingPage fb;
 	 
 	
     @Given("^User is on the application Landing page$")
@@ -132,7 +134,35 @@ public class SearchDefination extends Base{
         Assert.assertTrue(h.getLogo().getText().contains("GREENKART"));
     }
      	
-  		
+    @When("^User clicks the flight booking link$")
+    public void user_clicks_the_flight_booking_link() throws Throwable {
+       System.out.println("User clicks the flight booking link");
+       h=new HomePage(driver);
+       h.getLink().click();
+       
+       Set<String> windowIds = driver.getWindowHandles();
+       Iterator<String> iter = windowIds.iterator();
+       
+       String mainWindow = iter.next();
+       String childWindow = iter.next();
+       
+       driver.switchTo().window(childWindow);
+       System.out.println("The title of the child window :" + driver.getTitle());
+       fb=new FlightBookingPage(driver);
+       Assert.assertTrue(fb.getLogo().getText().contains("Flights"));
+       Assert.assertTrue(fb.getHotel().getText().contains("Hotels"));
+       Assert.assertTrue(fb.getPackages().getText().contains("Holiday Packages"));
+       Assert.assertTrue(fb.getStatus().getText().contains("Flight Status"));
+       Assert.assertTrue(fb.getcheckin().getText().contains("Check-In"));
+       Assert.assertTrue(fb.getBooking().getText().contains("Manage Booking"));
+       Thread.sleep(5000);
+       driver.close();
+        
+       
+       driver.switchTo().window(mainWindow);
+   	   System.out.println("The title of the main window :" + driver.getTitle());
+   	   
+    }		
     	
     
         

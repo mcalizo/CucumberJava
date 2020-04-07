@@ -4,6 +4,10 @@ import cucumber.api.java.en.Given;
 import cucumber.api.java.en.When;
 import cucumber.api.java.en.Then;
 import cucumber.api.junit.Cucumber;
+
+import java.util.Iterator;
+import java.util.Set;
+
 import org.junit.runner.RunWith;
 import org.testng.Assert;
 
@@ -27,6 +31,7 @@ public class SearchDefination extends Base{
     public void user_is_on_the_application_landing_page() throws Throwable {
     	System.out.println("User is on the landing Page");
         driver=Base.getDriver();
+        
         
     }
 
@@ -73,6 +78,60 @@ public class SearchDefination extends Base{
         
     }
     
+    @When("^User click the cart$")
+    public void user_click_the_cart() throws Throwable {
+    	System.out.println("User click the cart");
+    	ct=new CartPage(driver);
+    	ct.getToCart().click();
+    }
+
+    @Then("^verify the cart is empty$")
+    public void verify_the_cart_is_empty() throws Throwable {
+    	System.out.println("verify the cart is empty");
+    	ct=new CartPage(driver);
+    	ct.getEmptyCart().isDisplayed();
+    	Assert.assertTrue(ct.getoCheckOut().getText().contains("PROCEED TO CHECKOUT")); 
+        
+    }
+    
+    @When("^User clicks the Top deals$")
+    public void user_clicks_the_top_deals() throws Throwable {
+    	System.out.println("User clicks the Top deals");
+    	h=new HomePage(driver);
+        h.getTopDeals().click();
+        Thread.sleep(5000);
+        
+        Set<String> windowIds = driver.getWindowHandles();
+        Iterator<String> iter = windowIds.iterator();
+        
+        String mainWindow = iter.next();
+        String childWindow = iter.next();
+        
+        driver.switchTo().window(childWindow);
+        
+        System.out.println("The title of the child window :" + driver.getTitle());
+              
+    }
+    
+
+    
+    @Then("^Top deals items will displayed$")
+    public void top_deals_items_will_displayed() throws Throwable {
+    	System.out.println("Top deals items are displayed");
+    	td=new TopDealsPage(driver);
+    	td.getApple().isDisplayed();
+    	td.getCarrot().isDisplayed();
+    	td.getMango().isDisplayed();
+    	td.getOrange().isDisplayed();
+    	td.getPotato().isDisplayed();
+    	td.getTomato().isDisplayed();
+    	
+    	
+    	System.out.println("The title of the main window :" + driver.getTitle());
+    
+    		
+    	
+    }
         
 
 }

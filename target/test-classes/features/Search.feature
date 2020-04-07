@@ -21,6 +21,22 @@ Examples:
 |Tomato	 |
 |Orange	 |
 
+@Test4
+Scenario: User proceed to cart without purchasing an items
+Given User is on the application Landing page
+When User click the cart
+Then verify the cart is empty 
+
+
+@Test5
+Scenario:
+Given User is on the application Landing page
+When User clicks the Top deals 
+Then Top deals items will displayed  
+
+
+
+
  
 
  

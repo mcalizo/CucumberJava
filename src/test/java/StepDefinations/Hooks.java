@@ -48,4 +48,11 @@ public class Hooks extends Base{
 		driver.close();
 		
 	}
+	
+	@After("@Test7")
+	public void AfterTest7()
+	{
+		driver.close();
+		
+	}
 }

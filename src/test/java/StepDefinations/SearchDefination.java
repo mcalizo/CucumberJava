@@ -9,6 +9,8 @@ import java.util.Iterator;
 import java.util.Set;
 
 import org.junit.runner.RunWith;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 
 import com.myproject.app.Base;
@@ -17,6 +19,7 @@ import Pages.CartPage;
 import Pages.CheckOutPage;
 import Pages.FlightBookingPage;
 import Pages.HomePage;
+import Pages.PlaceOrderPage;
 import Pages.TopDealsPage;
 
 @RunWith(Cucumber.class)
@@ -27,6 +30,7 @@ public class SearchDefination extends Base{
 	CheckOutPage cp;
 	TopDealsPage td;
 	FlightBookingPage fb;
+	PlaceOrderPage PO;
 	 
 	
     @Given("^User is on the application Landing page$")
@@ -49,8 +53,8 @@ public class SearchDefination extends Base{
     @Then("^\"([^\"]*)\" results are displayed$")
     public void something_results_are_displayed(String strArg1) throws Throwable {
     	System.out.println("Results are displayed");
-    Assert.assertTrue(h.getProductName().getText().contains(strArg1));
-    Thread.sleep(3000);
+    	Assert.assertTrue(h.getProductName().getText().contains(strArg1));
+    	Thread.sleep(3000);
    
     }
     
@@ -163,8 +167,77 @@ public class SearchDefination extends Base{
    	   System.out.println("The title of the main window :" + driver.getTitle());
    	   
     }		
-    	
     
+    @When("^User search for \"([^\"]*)\" to purchase$")
+    public void user_search_for_something_to_purchase(String strArg2) throws Throwable {
+    	h=new HomePage(driver);
+        Assert.assertTrue(h.getLogo().getText().contains("GREENKART"));
+        h.getSearch().sendKeys(strArg2);
+    	Thread.sleep(3000);
+    	h.getAmount().click();
+        h.getToCart().click();
+        Thread.sleep(3000);
+    }
+
+    @Then("^The items are displayed in checkout page$")
+    public void the_items_are_displayed_in_checkout_page() throws Throwable {
         
+    }
+
+    @And("^Search for \"([^\"]*)\" to purchase$")
+    public void search_for_something_to_purchase(String strArg3) throws Throwable {
+    	h=new HomePage(driver);
+    	ct=new CartPage(driver);
+    	h.getSearch().clear();
+        h.getSearch().sendKeys(strArg3);
+    	Thread.sleep(3000);
+    	h.getAmount().click();
+        h.getToCart().click();
+        Thread.sleep(3000);
+        ct.getToCart().click();
+        ct.getoCheckOut().click();
+        Thread.sleep(3000);
+                   
+        WebElement Vege1=driver.findElement(By.xpath("//p[contains(text(),'150')]"));
+        WebElement Vege2=driver.findElement(By.xpath("//p[contains(text(),'380')]"));
+        WebElement Total=driver.findElement(By.xpath("//span[@class='discountAmt']"));
+        
+        String st1= Vege1.getText();
+        String st2= Vege2.getText();
+        String st3= Total.getText();
+        
+        int value1 = Integer.parseInt(st1);
+        int value2 = Integer.parseInt(st2);
+        int value3 = Integer.parseInt(st3);       
+        
+        int sum =value1 + value2;
+        System.out.println(sum);
+        
+        int TotalVege =value3;
+        System.out.println(TotalVege);
+        
+        Assert.assertEquals(sum, TotalVege);
+        
+        
+    }
+
+    @And("^User proceed to purchase the items$")
+    public void user_proceed_to_purchase_the_items() throws Throwable {    	
+    	PO=new PlaceOrderPage(driver);    	
+        Thread.sleep(3000);
+        PO.getCode().isDisplayed();
+        PO.getApply().isDisplayed();
+        PO.getplaceOrder().click();
+        Thread.sleep(5000);
+        PO.getSelectCountry().click();
+    	PO.getVisibleText().click();
+    	PO.getCheckbox().click();
+    	Thread.sleep(5000);
+    	PO.getButton().click();
+    	Assert.assertTrue(PO.getThankYouText().getText().contains("Thank you, your order has been placed successfully"));
+        Thread.sleep(5000);
+    }
+
+              
 
 }

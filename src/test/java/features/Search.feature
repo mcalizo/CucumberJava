@@ -10,7 +10,7 @@ Then "Cucumber" results are displayed
 Scenario Outline: Search for items and then move to checkout page
 Given User is on the application Landing page   
 When User search for <Name> Vegetable 
-And Added items to cart             
+And Added items to cart              
 And User proceeded to checkout page for purchase  
 Then verify selected <Name> items are displayed in checkout page 
 
@@ -18,13 +18,13 @@ Examples:
 |Name	 |
 |Brinjal |
 |Beetroot|
-|Tomato	 |
+|Tomato	 | 
 |Orange	 |
 
 @Test4
 Scenario: User proceed to cart without purchasing an items
 Given User is on the application Landing page
-When User click the cart
+When User click the cart 
 Then verify the cart is empty 
 
 
@@ -39,6 +39,15 @@ Scenario:
 Given User is on the application Landing page
 When User clicks the flight booking link  
 Then User go back to the greenkart homepage 
+And Added items to cart
+
+@Test7
+Scenario:
+Given User is on the application Landing page
+When User search for "Orange" to purchase
+And Search for "Pista" to purchase
+And User proceed to purchase the items 
+Then The items are displayed in checkout page
 
 
 

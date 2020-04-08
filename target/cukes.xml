@@ -1,6 +1,83 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="1" time="55.538468">
-<testcase classname="Search and Place order" name="" time="55.538468">
+<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="11" time="370.40223">
+<testcase classname="Purchasing Items from Search to Place order" name="Proceed to placing order page" time="46.678405">
+<system-out><![CDATA[Given User is on the application Landing page...............................passed
+When User search for Almonds Vegetable......................................passed
+And Added items to cart.....................................................passed
+And User proceeded to checkout page for purchase............................passed
+Then verify selected Almonds items are displayed in checkout page...........passed
+And User proceeded to place order page......................................passed
+Then verify that the vegetables are successfully purchased..................passed
+]]></system-out>
+</testcase>
+<testcase classname="Purchasing Items from Search to Place order" name="Proceed to placing order page 2" time="49.371956">
+<system-out><![CDATA[Given User is on the application Landing page...............................passed
+When User search for Walnuts Vegetable......................................passed
+And Added items to cart.....................................................passed
+And User proceeded to checkout page for purchase............................passed
+Then verify selected Walnuts items are displayed in checkout page...........passed
+And User proceeded to place order page......................................passed
+Then verify that the vegetables are successfully purchased..................passed
+]]></system-out>
+</testcase>
+<testcase classname="Search and Place order" name="Search items and validate results" time="24.016143">
+<system-out><![CDATA[Given User is on the application Landing page...............................passed
+When User search for Cucumber Vegetable.....................................passed
+Then "Cucumber" results are displayed.......................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Search and Place order" name="Search for items and then move to checkout page" time="28.062406">
+<system-out><![CDATA[Given User is on the application Landing page...............................passed
+When User search for Brinjal Vegetable......................................passed
+And Added items to cart.....................................................passed
+And User proceeded to checkout page for purchase............................passed
+Then verify selected Brinjal items are displayed in checkout page...........passed
+]]></system-out>
+</testcase>
+<testcase classname="Search and Place order" name="Search for items and then move to checkout page 2" time="28.378771">
+<system-out><![CDATA[Given User is on the application Landing page...............................passed
+When User search for Beetroot Vegetable.....................................passed
+And Added items to cart.....................................................passed
+And User proceeded to checkout page for purchase............................passed
+Then verify selected Beetroot items are displayed in checkout page..........passed
+]]></system-out>
+</testcase>
+<testcase classname="Search and Place order" name="Search for items and then move to checkout page 3" time="27.899464">
+<system-out><![CDATA[Given User is on the application Landing page...............................passed
+When User search for Tomato Vegetable.......................................passed
+And Added items to cart.....................................................passed
+And User proceeded to checkout page for purchase............................passed
+Then verify selected Tomato items are displayed in checkout page............passed
+]]></system-out>
+</testcase>
+<testcase classname="Search and Place order" name="Search for items and then move to checkout page 4" time="29.031294">
+<system-out><![CDATA[Given User is on the application Landing page...............................passed
+When User search for Orange Vegetable.......................................passed
+And Added items to cart.....................................................passed
+And User proceeded to checkout page for purchase............................passed
+Then verify selected Orange items are displayed in checkout page............passed
+]]></system-out>
+</testcase>
+<testcase classname="Search and Place order" name="User proceed to cart without purchasing an items" time="17.966361">
+<system-out><![CDATA[Given User is on the application Landing page...............................passed
+When User click the cart....................................................passed
+Then verify the cart is empty...............................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Search and Place order" name="" time="32.371661">
+<system-out><![CDATA[Given User is on the application Landing page...............................passed
+When User clicks the Top deals..............................................passed
+Then User go back to the greenkart homepage.................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Search and Place order" name="" time="32.95617">
+<system-out><![CDATA[Given User is on the application Landing page...............................passed
+When User clicks the flight booking link....................................passed
+Then User go back to the greenkart homepage.................................passed
+And Added items to cart.....................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Search and Place order" name="" time="53.669599">
 <system-out><![CDATA[Given User is on the application Landing page...............................passed
 When User search for "Orange" to purchase...................................passed
 And Search for "Pista" to purchase..........................................passed

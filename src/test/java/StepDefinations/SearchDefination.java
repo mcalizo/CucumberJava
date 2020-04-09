@@ -46,6 +46,7 @@ public class SearchDefination extends Base{
     	System.out.println("User is searching for Vegetable");
         h=new HomePage(driver);
         Assert.assertTrue(h.getLogo().getText().contains("GREENKART"));
+        Assert.assertEquals(true, h.getLogo().isDisplayed());
         h.getSearch().sendKeys(strArg1);
     	Thread.sleep(3000);
     }
@@ -119,11 +120,17 @@ public class SearchDefination extends Base{
         
         td=new TopDealsPage(driver);
     	td.getApple().isDisplayed();
+    	Assert.assertEquals(true, td.getApple().isDisplayed());
     	td.getCarrot().isDisplayed();
+    	Assert.assertEquals(true, td.getCarrot().isDisplayed());
     	td.getMango().isDisplayed();
+    	Assert.assertEquals(true, td.getMango().isDisplayed());
     	td.getOrange().isDisplayed();
+    	Assert.assertEquals(true, td.getOrange().isDisplayed());
     	td.getPotato().isDisplayed();
+    	Assert.assertEquals(true, td.getPotato().isDisplayed());
     	td.getTomato().isDisplayed();
+    	Assert.assertEquals(true, td.getTomato().isDisplayed());
     	Thread.sleep(5000);
     	driver.close();
     	
@@ -136,6 +143,7 @@ public class SearchDefination extends Base{
     	System.out.println("User go back to the greenkart homepage");
     	h=new HomePage(driver);
         Assert.assertTrue(h.getLogo().getText().contains("GREENKART"));
+        Thread.sleep(3000);
     }
      	
     @When("^User clicks the flight booking link$")
@@ -165,7 +173,7 @@ public class SearchDefination extends Base{
        
        driver.switchTo().window(mainWindow);
    	   System.out.println("The title of the main window :" + driver.getTitle());
-   	   
+   	     	   
     }		
     
     @When("^User search for \"([^\"]*)\" to purchase$")
@@ -235,7 +243,8 @@ public class SearchDefination extends Base{
     	Thread.sleep(5000);
     	PO.getButton().click();
     	Assert.assertTrue(PO.getThankYouText().getText().contains("Thank you, your order has been placed successfully"));
-        Thread.sleep(5000);
+        Assert.assertEquals(true, PO.getThankYouText().isDisplayed());
+    	Thread.sleep(5000);
     }
 
               

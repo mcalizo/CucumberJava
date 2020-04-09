@@ -1,8 +1,12 @@
+Pages\FlightBookingPage.class
 com\myproject\app\AppTest.class
 CucumberOptions\TestRunner.class
 com\myproject\app\Base.class
+Pages\TopDealsPage.class
 StepDefinations\Hooks.class
+StepDefinations\PlaceOrderDefination.class
 StepDefinations\SearchDefination.class
 Pages\CartPage.class
 Pages\CheckOutPage.class
 Pages\HomePage.class
+Pages\PlaceOrderPage.class

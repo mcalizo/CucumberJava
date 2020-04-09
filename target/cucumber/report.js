@@ -144,7 +144,7 @@ formatter.match({
   "location": "SearchDefination.user_is_on_the_application_landing_page()"
 });
 formatter.result({
-  "duration": 20046986800,
+  "duration": 17862826900,
   "status": "passed"
 });
 formatter.match({
@@ -157,21 +157,21 @@ formatter.match({
   "location": "SearchDefination.user_search_for_something_vegetable(String)"
 });
 formatter.result({
-  "duration": 3566418200,
+  "duration": 3286596200,
   "status": "passed"
 });
 formatter.match({
   "location": "SearchDefination.added_items_to_cart()"
 });
 formatter.result({
-  "duration": 3515902900,
+  "duration": 3158173700,
   "status": "passed"
 });
 formatter.match({
   "location": "SearchDefination.user_proceeded_to_checkout_page_for_purchase()"
 });
 formatter.result({
-  "duration": 3270160100,
+  "duration": 3153798300,
   "status": "passed"
 });
 formatter.match({
@@ -184,25 +184,25 @@ formatter.match({
   "location": "SearchDefination.verify_selected_items_are_displayed_in_checkout_page(String)"
 });
 formatter.result({
-  "duration": 54068000,
+  "duration": 51533700,
   "status": "passed"
 });
 formatter.match({
   "location": "PlaceOrderDefination.user_proceeded_to_place_order_page()"
 });
 formatter.result({
-  "duration": 5319336000,
+  "duration": 5130881700,
   "status": "passed"
 });
 formatter.match({
   "location": "PlaceOrderDefination.verify_that_the_vegetables_are_successfully_purchased()"
 });
 formatter.result({
-  "duration": 10653729700,
+  "duration": 10301620900,
   "status": "passed"
 });
 formatter.after({
-  "duration": 251803700,
+  "duration": 4087732600,
   "status": "passed"
 });
 formatter.scenario({
@@ -264,7 +264,7 @@ formatter.match({
   "location": "SearchDefination.user_is_on_the_application_landing_page()"
 });
 formatter.result({
-  "duration": 19069908100,
+  "duration": 16564626600,
   "status": "passed"
 });
 formatter.match({
@@ -277,21 +277,21 @@ formatter.match({
   "location": "SearchDefination.user_search_for_something_vegetable(String)"
 });
 formatter.result({
-  "duration": 3405454700,
+  "duration": 3239802700,
   "status": "passed"
 });
 formatter.match({
   "location": "SearchDefination.added_items_to_cart()"
 });
 formatter.result({
-  "duration": 3288602000,
+  "duration": 3158015300,
   "status": "passed"
 });
 formatter.match({
   "location": "SearchDefination.user_proceeded_to_checkout_page_for_purchase()"
 });
 formatter.result({
-  "duration": 3250962700,
+  "duration": 3154059200,
   "status": "passed"
 });
 formatter.match({
@@ -304,25 +304,397 @@ formatter.match({
   "location": "SearchDefination.verify_selected_items_are_displayed_in_checkout_page(String)"
 });
 formatter.result({
-  "duration": 70949300,
+  "duration": 46058300,
   "status": "passed"
 });
 formatter.match({
   "location": "PlaceOrderDefination.user_proceeded_to_place_order_page()"
 });
 formatter.result({
-  "duration": 5313906000,
+  "duration": 5122984800,
   "status": "passed"
 });
 formatter.match({
   "location": "PlaceOrderDefination.verify_that_the_vegetables_are_successfully_purchased()"
 });
 formatter.result({
-  "duration": 10677209900,
+  "duration": 10313265100,
   "status": "passed"
 });
 formatter.after({
-  "duration": 4294963400,
+  "duration": 131991600,
+  "status": "passed"
+});
+formatter.scenarioOutline({
+  "line": 19,
+  "name": "Inputting invalid code in place order",
+  "description": "",
+  "id": "purchasing-items-from-search-to-place-order;inputting-invalid-code-in-place-order",
+  "type": "scenario_outline",
+  "keyword": "Scenario Outline",
+  "tags": [
+    {
+      "line": 18,
+      "name": "@Test8"
+    }
+  ]
+});
+formatter.step({
+  "line": 20,
+  "name": "User is on the application Landing page",
+  "keyword": "Given "
+});
+formatter.step({
+  "line": 21,
+  "name": "User search for \u003cName\u003e Vegetable",
+  "keyword": "When "
+});
+formatter.step({
+  "line": 22,
+  "name": "Added items to cart",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 23,
+  "name": "User proceeded to checkout page for purchase",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 24,
+  "name": "verify selected \u003cName\u003e items are displayed in checkout page",
+  "keyword": "Then "
+});
+formatter.step({
+  "line": 25,
+  "name": "User enters an invalid code then click apply",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 26,
+  "name": "Error message will show up",
+  "keyword": "Then "
+});
+formatter.examples({
+  "line": 28,
+  "name": "",
+  "description": "",
+  "id": "purchasing-items-from-search-to-place-order;inputting-invalid-code-in-place-order;",
+  "rows": [
+    {
+      "cells": [
+        "Name"
+      ],
+      "line": 29,
+      "id": "purchasing-items-from-search-to-place-order;inputting-invalid-code-in-place-order;;1"
+    },
+    {
+      "cells": [
+        "Tomato"
+      ],
+      "line": 30,
+      "id": "purchasing-items-from-search-to-place-order;inputting-invalid-code-in-place-order;;2"
+    }
+  ],
+  "keyword": "Examples"
+});
+formatter.scenario({
+  "line": 30,
+  "name": "Inputting invalid code in place order",
+  "description": "",
+  "id": "purchasing-items-from-search-to-place-order;inputting-invalid-code-in-place-order;;2",
+  "type": "scenario",
+  "keyword": "Scenario Outline",
+  "tags": [
+    {
+      "line": 18,
+      "name": "@Test8"
+    }
+  ]
+});
+formatter.step({
+  "line": 20,
+  "name": "User is on the application Landing page",
+  "keyword": "Given "
+});
+formatter.step({
+  "line": 21,
+  "name": "User search for Tomato Vegetable",
+  "matchedColumns": [
+    0
+  ],
+  "keyword": "When "
+});
+formatter.step({
+  "line": 22,
+  "name": "Added items to cart",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 23,
+  "name": "User proceeded to checkout page for purchase",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 24,
+  "name": "verify selected Tomato items are displayed in checkout page",
+  "matchedColumns": [
+    0
+  ],
+  "keyword": "Then "
+});
+formatter.step({
+  "line": 25,
+  "name": "User enters an invalid code then click apply",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 26,
+  "name": "Error message will show up",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "SearchDefination.user_is_on_the_application_landing_page()"
+});
+formatter.result({
+  "duration": 16795970100,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "Tomato",
+      "offset": 16
+    }
+  ],
+  "location": "SearchDefination.user_search_for_something_vegetable(String)"
+});
+formatter.result({
+  "duration": 3250020500,
+  "status": "passed"
+});
+formatter.match({
+  "location": "SearchDefination.added_items_to_cart()"
+});
+formatter.result({
+  "duration": 3168964500,
+  "status": "passed"
+});
+formatter.match({
+  "location": "SearchDefination.user_proceeded_to_checkout_page_for_purchase()"
+});
+formatter.result({
+  "duration": 3139559600,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "Tomato",
+      "offset": 16
+    }
+  ],
+  "location": "SearchDefination.verify_selected_items_are_displayed_in_checkout_page(String)"
+});
+formatter.result({
+  "duration": 23862800,
+  "status": "passed"
+});
+formatter.match({
+  "location": "PlaceOrderDefination.user_enters_an_invalid_code_then_click_apply()"
+});
+formatter.result({
+  "duration": 5135527900,
+  "status": "passed"
+});
+formatter.match({
+  "location": "PlaceOrderDefination.error_message_will_show_up()"
+});
+formatter.result({
+  "duration": 61623400,
+  "status": "passed"
+});
+formatter.after({
+  "duration": 70304800,
+  "status": "passed"
+});
+formatter.scenario({
+  "line": 33,
+  "name": "Forgot to enter the promotion code",
+  "description": "",
+  "id": "purchasing-items-from-search-to-place-order;forgot-to-enter-the-promotion-code",
+  "type": "scenario",
+  "keyword": "Scenario",
+  "tags": [
+    {
+      "line": 32,
+      "name": "@Test9"
+    }
+  ]
+});
+formatter.step({
+  "line": 34,
+  "name": "User is on the application Landing page",
+  "keyword": "Given "
+});
+formatter.step({
+  "line": 35,
+  "name": "User search for Cucumber Vegetable",
+  "keyword": "When "
+});
+formatter.step({
+  "line": 36,
+  "name": "\"Cucumber\" results are displayed",
+  "keyword": "Then "
+});
+formatter.step({
+  "line": 37,
+  "name": "Added items to cart",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 38,
+  "name": "User proceeded to checkout page for purchase",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 39,
+  "name": "User clicks apply without promo code",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 40,
+  "name": "User will get notify to enter a code",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "SearchDefination.user_is_on_the_application_landing_page()"
+});
+formatter.result({
+  "duration": 17051093600,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "Cucumber",
+      "offset": 16
+    }
+  ],
+  "location": "SearchDefination.user_search_for_something_vegetable(String)"
+});
+formatter.result({
+  "duration": 3251093000,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "Cucumber",
+      "offset": 1
+    }
+  ],
+  "location": "SearchDefination.something_results_are_displayed(String)"
+});
+formatter.result({
+  "duration": 3025449400,
+  "status": "passed"
+});
+formatter.match({
+  "location": "SearchDefination.added_items_to_cart()"
+});
+formatter.result({
+  "duration": 3173313400,
+  "status": "passed"
+});
+formatter.match({
+  "location": "SearchDefination.user_proceeded_to_checkout_page_for_purchase()"
+});
+formatter.result({
+  "duration": 3176355300,
+  "status": "passed"
+});
+formatter.match({
+  "location": "PlaceOrderDefination.user_clicks_apply_without_promo_code()"
+});
+formatter.result({
+  "duration": 5073088100,
+  "status": "passed"
+});
+formatter.match({
+  "location": "PlaceOrderDefination.user_will_get_notify_to_enter_a_code()"
+});
+formatter.result({
+  "duration": 55207500,
+  "status": "passed"
+});
+formatter.after({
+  "duration": 70933500,
+  "status": "passed"
+});
+formatter.scenario({
+  "line": 44,
+  "name": "Datatables scenario",
+  "description": "",
+  "id": "purchasing-items-from-search-to-place-order;datatables-scenario",
+  "type": "scenario",
+  "keyword": "Scenario",
+  "tags": [
+    {
+      "line": 43,
+      "name": "@Test10"
+    }
+  ]
+});
+formatter.step({
+  "line": 45,
+  "name": "User is on the application Landing page",
+  "keyword": "Given "
+});
+formatter.step({
+  "line": 46,
+  "name": "User search for an items",
+  "rows": [
+    {
+      "cells": [
+        "Corn",
+        "Onion"
+      ],
+      "line": 47
+    },
+    {
+      "cells": [
+        "Orange",
+        "Pista"
+      ],
+      "line": 48
+    }
+  ],
+  "keyword": "When "
+});
+formatter.step({
+  "line": 49,
+  "name": "Results will displayed",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "SearchDefination.user_is_on_the_application_landing_page()"
+});
+formatter.result({
+  "duration": 16663325000,
+  "status": "passed"
+});
+formatter.match({
+  "location": "PlaceOrderDefination.user_search_for_an_items(DataTable)"
+});
+formatter.result({
+  "duration": 167726300,
+  "status": "passed"
+});
+formatter.match({
+  "location": "PlaceOrderDefination.results_will_displayed()"
+});
+formatter.result({
+  "duration": 47627600,
   "status": "passed"
 });
 formatter.uri("Search.feature");
@@ -366,7 +738,7 @@ formatter.match({
   "location": "SearchDefination.user_is_on_the_application_landing_page()"
 });
 formatter.result({
-  "duration": 17299013100,
+  "duration": 16888930300,
   "status": "passed"
 });
 formatter.match({
@@ -379,7 +751,7 @@ formatter.match({
   "location": "SearchDefination.user_search_for_something_vegetable(String)"
 });
 formatter.result({
-  "duration": 3447000400,
+  "duration": 3261291000,
   "status": "passed"
 });
 formatter.match({
@@ -392,11 +764,11 @@ formatter.match({
   "location": "SearchDefination.something_results_are_displayed(String)"
 });
 formatter.result({
-  "duration": 3078556000,
+  "duration": 3040080600,
   "status": "passed"
 });
 formatter.after({
-  "duration": 191573600,
+  "duration": 92033000,
   "status": "passed"
 });
 formatter.scenarioOutline({
@@ -531,7 +903,7 @@ formatter.match({
   "location": "SearchDefination.user_is_on_the_application_landing_page()"
 });
 formatter.result({
-  "duration": 17279436600,
+  "duration": 16756389500,
   "status": "passed"
 });
 formatter.match({
@@ -544,21 +916,21 @@ formatter.match({
   "location": "SearchDefination.user_search_for_something_vegetable(String)"
 });
 formatter.result({
-  "duration": 3642322900,
+  "duration": 3272490000,
   "status": "passed"
 });
 formatter.match({
   "location": "SearchDefination.added_items_to_cart()"
 });
 formatter.result({
-  "duration": 3485862900,
+  "duration": 3174665400,
   "status": "passed"
 });
 formatter.match({
   "location": "SearchDefination.user_proceeded_to_checkout_page_for_purchase()"
 });
 formatter.result({
-  "duration": 3400466900,
+  "duration": 3156913800,
   "status": "passed"
 });
 formatter.match({
@@ -571,11 +943,11 @@ formatter.match({
   "location": "SearchDefination.verify_selected_items_are_displayed_in_checkout_page(String)"
 });
 formatter.result({
-  "duration": 82173800,
+  "duration": 43566300,
   "status": "passed"
 });
 formatter.after({
-  "duration": 172142900,
+  "duration": 72530100,
   "status": "passed"
 });
 formatter.scenario({
@@ -627,7 +999,7 @@ formatter.match({
   "location": "SearchDefination.user_is_on_the_application_landing_page()"
 });
 formatter.result({
-  "duration": 17456872500,
+  "duration": 17161658500,
   "status": "passed"
 });
 formatter.match({
@@ -640,21 +1012,21 @@ formatter.match({
   "location": "SearchDefination.user_search_for_something_vegetable(String)"
 });
 formatter.result({
-  "duration": 3777082300,
+  "duration": 3264027000,
   "status": "passed"
 });
 formatter.match({
   "location": "SearchDefination.added_items_to_cart()"
 });
 formatter.result({
-  "duration": 3555078100,
+  "duration": 3147312700,
   "status": "passed"
 });
 formatter.match({
   "location": "SearchDefination.user_proceeded_to_checkout_page_for_purchase()"
 });
 formatter.result({
-  "duration": 3390770600,
+  "duration": 3137756900,
   "status": "passed"
 });
 formatter.match({
@@ -667,11 +1039,11 @@ formatter.match({
   "location": "SearchDefination.verify_selected_items_are_displayed_in_checkout_page(String)"
 });
 formatter.result({
-  "duration": 74147700,
+  "duration": 32019700,
   "status": "passed"
 });
 formatter.after({
-  "duration": 124820100,
+  "duration": 80349100,
   "status": "passed"
 });
 formatter.scenario({
@@ -723,7 +1095,7 @@ formatter.match({
   "location": "SearchDefination.user_is_on_the_application_landing_page()"
 });
 formatter.result({
-  "duration": 17229104600,
+  "duration": 16781775800,
   "status": "passed"
 });
 formatter.match({
@@ -736,21 +1108,21 @@ formatter.match({
   "location": "SearchDefination.user_search_for_something_vegetable(String)"
 });
 formatter.result({
-  "duration": 3538482200,
+  "duration": 3242676700,
   "status": "passed"
 });
 formatter.match({
   "location": "SearchDefination.added_items_to_cart()"
 });
 formatter.result({
-  "duration": 3488936000,
+  "duration": 3165418800,
   "status": "passed"
 });
 formatter.match({
   "location": "SearchDefination.user_proceeded_to_checkout_page_for_purchase()"
 });
 formatter.result({
-  "duration": 3391272400,
+  "duration": 3153650700,
   "status": "passed"
 });
 formatter.match({
@@ -763,11 +1135,11 @@ formatter.match({
   "location": "SearchDefination.verify_selected_items_are_displayed_in_checkout_page(String)"
 });
 formatter.result({
-  "duration": 79290200,
+  "duration": 45351900,
   "status": "passed"
 });
 formatter.after({
-  "duration": 172378500,
+  "duration": 78295500,
   "status": "passed"
 });
 formatter.scenario({
@@ -819,7 +1191,7 @@ formatter.match({
   "location": "SearchDefination.user_is_on_the_application_landing_page()"
 });
 formatter.result({
-  "duration": 18317376200,
+  "duration": 16510947600,
   "status": "passed"
 });
 formatter.match({
@@ -832,21 +1204,21 @@ formatter.match({
   "location": "SearchDefination.user_search_for_something_vegetable(String)"
 });
 formatter.result({
-  "duration": 3569465000,
+  "duration": 3239563300,
   "status": "passed"
 });
 formatter.match({
   "location": "SearchDefination.added_items_to_cart()"
 });
 formatter.result({
-  "duration": 3464644500,
+  "duration": 3148920900,
   "status": "passed"
 });
 formatter.match({
   "location": "SearchDefination.user_proceeded_to_checkout_page_for_purchase()"
 });
 formatter.result({
-  "duration": 3420925800,
+  "duration": 3174641100,
   "status": "passed"
 });
 formatter.match({
@@ -859,11 +1231,11 @@ formatter.match({
   "location": "SearchDefination.verify_selected_items_are_displayed_in_checkout_page(String)"
 });
 formatter.result({
-  "duration": 76095900,
+  "duration": 45233000,
   "status": "passed"
 });
 formatter.after({
-  "duration": 182787000,
+  "duration": 78636400,
   "status": "passed"
 });
 formatter.scenario({
@@ -899,32 +1271,32 @@ formatter.match({
   "location": "SearchDefination.user_is_on_the_application_landing_page()"
 });
 formatter.result({
-  "duration": 17527076700,
+  "duration": 16827324400,
   "status": "passed"
 });
 formatter.match({
   "location": "SearchDefination.user_click_the_cart()"
 });
 formatter.result({
-  "duration": 188605500,
+  "duration": 100819700,
   "status": "passed"
 });
 formatter.match({
   "location": "SearchDefination.verify_the_cart_is_empty()"
 });
 formatter.result({
-  "duration": 132361900,
+  "duration": 66630000,
   "status": "passed"
 });
 formatter.after({
-  "duration": 118317100,
+  "duration": 80240600,
   "status": "passed"
 });
 formatter.scenario({
   "line": 32,
-  "name": "",
+  "name": "Accessing the Top deals",
   "description": "",
-  "id": "search-and-place-order;",
+  "id": "search-and-place-order;accessing-the-top-deals",
   "type": "scenario",
   "keyword": "Scenario",
   "tags": [
@@ -953,32 +1325,32 @@ formatter.match({
   "location": "SearchDefination.user_is_on_the_application_landing_page()"
 });
 formatter.result({
-  "duration": 17284401700,
+  "duration": 16939274800,
   "status": "passed"
 });
 formatter.match({
   "location": "SearchDefination.user_clicks_the_top_deals()"
 });
 formatter.result({
-  "duration": 14796382100,
+  "duration": 14547265700,
   "status": "passed"
 });
 formatter.match({
   "location": "SearchDefination.user_go_back_to_the_greenkart_homepage()"
 });
 formatter.result({
-  "duration": 81886500,
+  "duration": 3075351000,
   "status": "passed"
 });
 formatter.after({
-  "duration": 208991000,
+  "duration": 97514300,
   "status": "passed"
 });
 formatter.scenario({
   "line": 38,
-  "name": "",
+  "name": "Accessing the child window",
   "description": "",
-  "id": "search-and-place-order;",
+  "id": "search-and-place-order;accessing-the-child-window",
   "type": "scenario",
   "keyword": "Scenario",
   "tags": [
@@ -1003,48 +1375,36 @@ formatter.step({
   "name": "User go back to the greenkart homepage",
   "keyword": "Then "
 });
-formatter.step({
-  "line": 42,
-  "name": "Added items to cart",
-  "keyword": "And "
-});
 formatter.match({
   "location": "SearchDefination.user_is_on_the_application_landing_page()"
 });
 formatter.result({
-  "duration": 17535554700,
+  "duration": 16895119900,
   "status": "passed"
 });
 formatter.match({
   "location": "SearchDefination.user_clicks_the_flight_booking_link()"
 });
 formatter.result({
-  "duration": 11441524900,
+  "duration": 11701063700,
   "status": "passed"
 });
 formatter.match({
   "location": "SearchDefination.user_go_back_to_the_greenkart_homepage()"
 });
 formatter.result({
-  "duration": 87065700,
-  "status": "passed"
-});
-formatter.match({
-  "location": "SearchDefination.added_items_to_cart()"
-});
-formatter.result({
-  "duration": 3725479100,
+  "duration": 3036289300,
   "status": "passed"
 });
 formatter.after({
-  "duration": 166546000,
+  "duration": 99811600,
   "status": "passed"
 });
 formatter.scenario({
   "line": 45,
-  "name": "",
+  "name": "Comparing the value of the items to the total value",
   "description": "",
-  "id": "search-and-place-order;",
+  "id": "search-and-place-order;comparing-the-value-of-the-items-to-the-total-value",
   "type": "scenario",
   "keyword": "Scenario",
   "tags": [
@@ -1083,7 +1443,7 @@ formatter.match({
   "location": "SearchDefination.user_is_on_the_application_landing_page()"
 });
 formatter.result({
-  "duration": 17563103700,
+  "duration": 16497267000,
   "status": "passed"
 });
 formatter.match({
@@ -1096,7 +1456,7 @@ formatter.match({
   "location": "SearchDefination.user_search_for_something_to_purchase(String)"
 });
 formatter.result({
-  "duration": 6813916300,
+  "duration": 6387978500,
   "status": "passed"
 });
 formatter.match({
@@ -1109,25 +1469,25 @@ formatter.match({
   "location": "SearchDefination.search_for_something_to_purchase(String)"
 });
 formatter.result({
-  "duration": 10216419200,
+  "duration": 9591635500,
   "status": "passed"
 });
 formatter.match({
   "location": "SearchDefination.user_proceed_to_purchase_the_items()"
 });
 formatter.result({
-  "duration": 18843642700,
+  "duration": 18497342300,
   "status": "passed"
 });
 formatter.match({
   "location": "SearchDefination.the_items_are_displayed_in_checkout_page()"
 });
 formatter.result({
-  "duration": 69800,
+  "duration": 109400,
   "status": "passed"
 });
 formatter.after({
-  "duration": 232447700,
+  "duration": 4089705000,
   "status": "passed"
 });
 });

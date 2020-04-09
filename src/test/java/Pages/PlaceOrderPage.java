@@ -90,5 +90,20 @@ By	ProductNameTable=By.xpath("//b[contains(text(),'#')]");
 	{
 		return driver.findElement(ProductNameTable);
 	}
+	
+By VerifyCoupon=By.xpath("//span[contains(text(),'Invalid code ..!')]");
+
+	public WebElement getVerify()
+	{
+		return driver.findElement(VerifyCoupon);
+	}
+	
+By EmptyCode=By.xpath("//span[contains(text(),'Empty code ..!')]");
+
+	public WebElement getEmptyCode()
+	{
+		return driver.findElement(EmptyCode);
+	}
+	
 
 }

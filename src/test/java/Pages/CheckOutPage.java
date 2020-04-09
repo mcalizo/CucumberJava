@@ -13,7 +13,7 @@ public WebDriver driver;
 	}
 
 	
-	By productName=By.xpath("//p[@class='product-name']");
+By productName=By.xpath("//p[@class='product-name']");
 	
 	
 	public WebElement getProductName()
@@ -22,5 +22,6 @@ public WebDriver driver;
 		
 	}
 	
+
 
 }

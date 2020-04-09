@@ -29,20 +29,20 @@ Then verify the cart is empty
 
 
 @Test5
-Scenario:
+Scenario: Accessing the Top deals
 Given User is on the application Landing page
 When User clicks the Top deals 
 Then User go back to the greenkart homepage     
 
 @Test6
-Scenario:
+Scenario: Accessing the child window
 Given User is on the application Landing page
 When User clicks the flight booking link  
 Then User go back to the greenkart homepage 
-And Added items to cart
+
 
 @Test7
-Scenario:
+Scenario: Comparing the value of the items to the total value
 Given User is on the application Landing page
 When User search for "Orange" to purchase
 And Search for "Pista" to purchase

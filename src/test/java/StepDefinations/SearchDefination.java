@@ -189,6 +189,14 @@ public class SearchDefination extends Base{
 
     @Then("^The items are displayed in checkout page$")
     public void the_items_are_displayed_in_checkout_page() throws Throwable {
+    	PO.getSelectCountry().click();
+    	PO.getVisibleText().click();
+    	PO.getCheckbox().click();
+    	Thread.sleep(5000);
+    	PO.getButton().click();
+    	Assert.assertTrue(PO.getThankYouText().getText().contains("Thank you, your order has been placed successfully"));
+        Assert.assertEquals(true, PO.getThankYouText().isDisplayed());
+    	Thread.sleep(5000);
         
     }
 
@@ -204,12 +212,15 @@ public class SearchDefination extends Base{
         Thread.sleep(3000);
         ct.getToCart().click();
         ct.getoCheckOut().click();
-        Thread.sleep(3000);
-                   
-        WebElement Vege1=driver.findElement(By.xpath("//p[contains(text(),'150')]"));
-        WebElement Vege2=driver.findElement(By.xpath("//p[contains(text(),'380')]"));
-        WebElement Total=driver.findElement(By.xpath("//span[@class='discountAmt']"));
+        Thread.sleep(5000);
         
+        WebElement Vege1=driver.findElement(By.xpath("//tr[2]//td[5]//p[1]"));
+        WebElement Vege2=driver.findElement(By.xpath("//tr[3]//td[5]//p[1]"));
+                   
+        //WebElement Vege1=driver.findElement(By.xpath("//p[contains(text(),'150')]"));
+        //WebElement Vege2=driver.findElement(By.xpath("//p[contains(text(),'380')]"));
+        WebElement Total=driver.findElement(By.xpath("//span[@class='discountAmt']"));
+     
         String st1= Vege1.getText();
         String st2= Vege2.getText();
         String st3= Total.getText();
@@ -237,14 +248,7 @@ public class SearchDefination extends Base{
         PO.getApply().isDisplayed();
         PO.getplaceOrder().click();
         Thread.sleep(5000);
-        PO.getSelectCountry().click();
-    	PO.getVisibleText().click();
-    	PO.getCheckbox().click();
-    	Thread.sleep(5000);
-    	PO.getButton().click();
-    	Assert.assertTrue(PO.getThankYouText().getText().contains("Thank you, your order has been placed successfully"));
-        Assert.assertEquals(true, PO.getThankYouText().isDisplayed());
-    	Thread.sleep(5000);
+        
     }
 
               

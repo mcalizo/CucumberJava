@@ -117,8 +117,10 @@ public class SearchDefination extends Base{
         driver.switchTo().window(childWindow);
         
         System.out.println("The title of the child window :" + driver.getTitle());
+        System.out.println(driver.getCurrentUrl());
         
         td=new TopDealsPage(driver);
+        Assert.assertEquals(true, td.getdealslogo().isDisplayed());
     	td.getApple().isDisplayed();
     	Assert.assertEquals(true, td.getApple().isDisplayed());
     	td.getCarrot().isDisplayed();
@@ -131,7 +133,42 @@ public class SearchDefination extends Base{
     	Assert.assertEquals(true, td.getPotato().isDisplayed());
     	td.getTomato().isDisplayed();
     	Assert.assertEquals(true, td.getTomato().isDisplayed());
-    	Thread.sleep(5000);
+    	Thread.sleep(5000);    	    	
+    	    	
+    	String Price1= td.getitem1().getText();
+        String Price2= td.getitem2().getText();
+        String Price3= td.getitem3().getText();
+        String Price4= td.getitem4().getText();
+        String Price5= td.getitem5().getText();
+        String Price6= td.getitem6().getText();
+        
+        int Itm1 = Integer.parseInt(Price1);
+        int Itm2 = Integer.parseInt(Price2);
+        int Itm3 = Integer.parseInt(Price3);
+        int Itm4 = Integer.parseInt(Price4);
+        int Itm5 = Integer.parseInt(Price5);
+        int Itm6 = Integer.parseInt(Price6);        
+            	
+        int price =Itm1 + Itm2 + Itm3 + Itm4 + Itm5 + Itm6;
+        System.out.println(price);         
+        
+    	String Dprice1= td.getditem1().getText();
+        String Dprice2= td.getditem2().getText();
+        String Dprice3= td.getditem3().getText();
+        String Dprice4= td.getditem4().getText();
+        String Dprice5= td.getditem5().getText();
+        String Dprice6= td.getditem6().getText();
+        
+        int ditm1 = Integer.parseInt(Dprice1);
+        int ditm2 = Integer.parseInt(Dprice2);
+        int ditm3 = Integer.parseInt(Dprice3);
+        int ditm4 = Integer.parseInt(Dprice4);
+        int ditm5 = Integer.parseInt(Dprice5);
+        int ditm6 = Integer.parseInt(Dprice6);
+        
+        int Disprice =ditm1 + ditm2 + ditm3 + ditm4 + ditm5 + ditm6;
+        System.out.println(Disprice);
+    	
     	driver.close();
     	
     	driver.switchTo().window(mainWindow);

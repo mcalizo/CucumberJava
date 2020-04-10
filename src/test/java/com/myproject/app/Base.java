@@ -24,6 +24,8 @@ public class Base {
         driver.manage().window().maximize();
         driver.manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS);
         driver.get(prop.getProperty("url"));
+        System.out.println(driver.getTitle());
+        System.out.println(driver.getCurrentUrl());
         return driver;
         
         

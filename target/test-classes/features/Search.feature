@@ -52,6 +52,8 @@ Then The items are displayed in checkout page
 
 
 
+
+
  
 
  

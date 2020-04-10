@@ -93,5 +93,26 @@ public class PlaceOrderDefination extends Base{
     	h.getProductName().isDisplayed();
     	
     }
+    
+    @Then("^User will see the error message is displayed$")
+    public void user_will_see_the_error_message_is_displayed() throws Throwable {
+    	System.out.println("User will see the error message is displayed");
+    	PO=new PlaceOrderPage(driver);
+        PO.getErrorMessage().isDisplayed();
+        Assert.assertEquals(true, PO.getErrorMessage().isDisplayed());
+        Assert.assertTrue(PO.getErrorMessage().getText().contains("Please accept Terms & Conditions - Required"));
+        
+    }
+
+    @And("^User click the proceed button without clicking the agreement$")
+    public void user_click_the_proceed_button_without_clicking_the_agreement() throws Throwable {
+    	System.out.println("User click the proceed button without clicking the agreement");
+    	PO=new PlaceOrderPage(driver);
+    	PO.getplaceOrder().click();
+    	Assert.assertEquals(false, PO.getCheckbox().isSelected());
+    	Assert.assertEquals(true, PO.getButton().isEnabled());
+    	PO.getButton().click();
+    	Thread.sleep(3000);
+    }	
 
 }

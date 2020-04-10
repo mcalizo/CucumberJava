@@ -41,11 +41,22 @@ Then User will get notify to enter a code
 
 
 @Test10
-Scenario: Datatables scenario
+Scenario: Data tables scenario
 Given User is on the application Landing page
 When User search for an items  
 | Corn	| Onion	|
 |Orange	| Pista	|
 Then Results will displayed 
+
+@Test11
+Scenario: 
+Given User is on the application Landing page
+When User search for Cucumber Vegetable 
+Then "Cucumber" results are displayed 
+And Added items to cart 
+And User proceeded to checkout page for purchase
+And User click the proceed button without clicking the agreement   
+Then User will see the error message is displayed   
+
 
 

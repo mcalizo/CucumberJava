@@ -105,5 +105,12 @@ By EmptyCode=By.xpath("//span[contains(text(),'Empty code ..!')]");
 		return driver.findElement(EmptyCode);
 	}
 	
+By ErrorMessage=By.xpath("//span[@class='errorAlert']//b");
+
+	public WebElement getErrorMessage()
+	{
+		return driver.findElement(ErrorMessage);
+	}
+	
 
 }

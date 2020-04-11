@@ -32,7 +32,7 @@ By SelectCountry=By.xpath("//div[@class='wrapperTwo']//div//select");
 		
 	}
 
-By SelectVisibleText=By.xpath("//option[contains(text(),'Philippines')]");
+By SelectVisibleText=By.xpath("//div[@class='wrapperTwo']//div//select");
 
 	public WebElement getVisibleText()
 	{
@@ -112,5 +112,18 @@ By ErrorMessage=By.xpath("//span[@class='errorAlert']//b");
 		return driver.findElement(ErrorMessage);
 	}
 	
+By GetQuantity1=By.xpath("//tr[2]//td[3]//p[1]");
+
+	public WebElement getQuantity1()
+	{
+		return driver.findElement(GetQuantity1);
+	}
+	
+By GetQuantity2=By.xpath("//tr[3]//td[3]//p[1]");
+
+	public WebElement getQuantity2()
+	{
+		return driver.findElement(GetQuantity2);	
+	}	
 
 }

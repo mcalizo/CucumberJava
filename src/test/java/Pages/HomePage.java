@@ -72,4 +72,11 @@ By BookingLink=By.xpath("//a[contains(text(),'Flight Booking')]");
 	{
 		return driver.findElement(BookingLink);
 	}
+	
+By Productquantity=By.xpath("//input[@class='quantity']");
+
+	public WebElement getQuantity()
+	{
+		return driver.findElement(Productquantity);
+	}	
 }

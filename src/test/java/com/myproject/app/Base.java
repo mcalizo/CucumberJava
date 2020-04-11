@@ -27,7 +27,7 @@ public class Base {
         System.out.println(driver.getTitle());
         System.out.println(driver.getCurrentUrl());
         return driver;
-        
+                     
         
 	}
 }

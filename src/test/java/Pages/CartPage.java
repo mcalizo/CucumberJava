@@ -20,7 +20,7 @@ By ClickCart=By.xpath("//a[@class='cart-icon']//img[contains(@class,'')]");
 		return driver.findElement(ClickCart);
 	}	
 	
-By ProceedtoCheckOut=By.xpath("//button[contains(text(),'PROCEED TO CHECKOUT')]");
+By ProceedtoCheckOut=By.xpath("//button[contains(text(),'PROCEED TO CHECKOUT')]"); 
 
 	public WebElement getoCheckOut()
 	{

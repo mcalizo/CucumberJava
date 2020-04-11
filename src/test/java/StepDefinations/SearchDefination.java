@@ -47,6 +47,7 @@ public class SearchDefination extends Base{
         h=new HomePage(driver);
         Assert.assertTrue(h.getLogo().getText().contains("GREENKART"));
         Assert.assertEquals(true, h.getLogo().isDisplayed());
+        System.out.println(h.getLogo().getText().contains("GREENKART"));;
         h.getSearch().sendKeys(strArg1);
     	Thread.sleep(3000);
     }
@@ -55,6 +56,7 @@ public class SearchDefination extends Base{
     public void something_results_are_displayed(String strArg1) throws Throwable {
     	System.out.println("Results are displayed");
     	Assert.assertTrue(h.getProductName().getText().contains(strArg1));
+    	System.out.println(h.getProductName().getText().contains(strArg1));
     	Thread.sleep(3000);
    
     }
@@ -90,15 +92,25 @@ public class SearchDefination extends Base{
     	System.out.println("User click the cart");
     	ct=new CartPage(driver);
     	ct.getToCart().click();
+    	Thread.sleep(3000);
     }
 
     @Then("^verify the cart is empty$")
     public void verify_the_cart_is_empty() throws Throwable {
     	System.out.println("verify the cart is empty");
     	ct=new CartPage(driver);
-    	ct.getEmptyCart().isDisplayed();
-    	Assert.assertTrue(ct.getoCheckOut().getText().contains("PROCEED TO CHECKOUT")); 
-        
+    	//to verify if the button is disabled 
+    	ct.getoCheckOut().getAttribute("class");   	  	
+    	System.out.println(ct.getoCheckOut().getAttribute("class"));
+    	if(ct.getoCheckOut().getAttribute("class").contains("disabled"))
+    	{
+    		System.out.print("empty cart");
+    		Assert.assertTrue(true);
+    	}
+    	else
+    	{
+    		Assert.assertTrue(false);
+    	}
     }
     
     @When("^User clicks the Top deals$")
@@ -107,7 +119,7 @@ public class SearchDefination extends Base{
     	h=new HomePage(driver);
         h.getTopDeals().click();
         Thread.sleep(5000);
-        
+        //to switch the focus from main window to child window
         Set<String> windowIds = driver.getWindowHandles();
         Iterator<String> iter = windowIds.iterator();
         
@@ -219,8 +231,18 @@ public class SearchDefination extends Base{
         Assert.assertTrue(h.getLogo().getText().contains("GREENKART"));
         h.getSearch().sendKeys(strArg2);
     	Thread.sleep(3000);
-    	h.getAmount().click();
-        h.getToCart().click();
+    	
+    	
+    	//while loop another way to to click the button multiple times
+    	int i=1;
+    	while(i<3)
+    	{
+    		h.getAmount().click();
+    		i++;
+    	}
+    	
+        
+    	h.getToCart().click();
         Thread.sleep(3000);
     }
 
@@ -233,6 +255,7 @@ public class SearchDefination extends Base{
     	PO.getButton().click();
     	Assert.assertTrue(PO.getThankYouText().getText().contains("Thank you, your order has been placed successfully"));
         Assert.assertEquals(true, PO.getThankYouText().isDisplayed());
+        System.out.println(PO.getThankYouText().getText());
     	Thread.sleep(5000);
         
     }
@@ -244,13 +267,21 @@ public class SearchDefination extends Base{
     	h.getSearch().clear();
         h.getSearch().sendKeys(strArg3);
     	Thread.sleep(3000);
-    	h.getAmount().click();
+    	
+    	
+    	//for loop to click the button multiple times
+    	for(int i=1;i<5;i++)
+    	{
+    		h.getAmount().click();
+    	}
+    	
         h.getToCart().click();
-        Thread.sleep(3000);
+        
         ct.getToCart().click();
         ct.getoCheckOut().click();
         Thread.sleep(5000);
         
+        // to compare the price of the items to the total amount
         WebElement Vege1=driver.findElement(By.xpath("//tr[2]//td[5]//p[1]"));
         WebElement Vege2=driver.findElement(By.xpath("//tr[3]//td[5]//p[1]"));
                    
@@ -272,8 +303,7 @@ public class SearchDefination extends Base{
         int TotalVege =value3;
         System.out.println(TotalVege);
         
-        Assert.assertEquals(sum, TotalVege);
-        
+        Assert.assertEquals(sum, TotalVege);        
         
     }
 
@@ -281,6 +311,8 @@ public class SearchDefination extends Base{
     public void user_proceed_to_purchase_the_items() throws Throwable {    	
     	PO=new PlaceOrderPage(driver);    	
         Thread.sleep(3000);
+        System.out.println(PO.getQuantity1().getText());
+        System.out.println(PO.getQuantity2().getText());
         PO.getCode().isDisplayed();
         PO.getApply().isDisplayed();
         PO.getplaceOrder().click();

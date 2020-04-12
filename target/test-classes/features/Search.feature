@@ -49,6 +49,11 @@ And Search for "Banana" to purchase
 And User proceed to purchase the items 
 Then The items are displayed in checkout page
 
+@Test12
+Scenario: Selecting an item in the homepage
+Given User is on the application Landing page
+When User select an item in the homepage 
+Then Item should be on cart  
 
 
 

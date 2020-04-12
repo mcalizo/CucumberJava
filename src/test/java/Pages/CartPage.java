@@ -35,4 +35,11 @@ By EmptyCart=By.xpath("//div[@class='cart-preview active']//div//div//h2[contain
 		return driver.findElement(EmptyCart);
 	}
 	
+By Cartitem=By.xpath("//div[@class='cart-preview active']//div//div//ul[@class='cart-items']");
+
+	public WebElement getItemName()
+	{
+		return driver.findElement(Cartitem);
+	}
+	
 }

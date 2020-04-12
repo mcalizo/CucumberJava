@@ -22,10 +22,13 @@ public class Base {
 		System.setProperty("webdriver.chrome.driver", "C:\\Users\\Jimemez\\Downloads\\chromedriver.exe");
         driver=new ChromeDriver(); 
         driver.manage().window().maximize();
-        driver.manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS);
+        driver.manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS);        
         driver.get(prop.getProperty("url"));
+        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         System.out.println(driver.getTitle());
         System.out.println(driver.getCurrentUrl());
+        driver.manage().deleteAllCookies();
+        //driver.close();
         return driver;
                      
         

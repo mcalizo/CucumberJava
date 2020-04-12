@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="15" time="477.244112">
-<testcase classname="Purchasing Items from Search to Place order" name="Proceed to placing order page" time="44.1961">
+<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="16" time="497.671994">
+<testcase classname="Purchasing Items from Search to Place order" name="Proceed to placing order page" time="44.088909">
 <system-out><![CDATA[Given User is on the application Landing page...............................passed
 When User search for Almonds Vegetable......................................passed
 And Added items to cart.....................................................passed
@@ -10,7 +10,7 @@ And User proceeded to place order page......................................pass
 Then verify that the vegetables are successfully purchased..................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Purchasing Items from Search to Place order" name="Proceed to placing order page 2" time="42.475141">
+<testcase classname="Purchasing Items from Search to Place order" name="Proceed to placing order page 2" time="42.48398">
 <system-out><![CDATA[Given User is on the application Landing page...............................passed
 When User search for Walnuts Vegetable......................................passed
 And Added items to cart.....................................................passed
@@ -20,7 +20,7 @@ And User proceeded to place order page......................................pass
 Then verify that the vegetables are successfully purchased..................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Purchasing Items from Search to Place order" name="Inputting invalid code in place order" time="32.459071">
+<testcase classname="Purchasing Items from Search to Place order" name="Inputting invalid code in place order" time="31.604413">
 <system-out><![CDATA[Given User is on the application Landing page...............................passed
 When User search for Tomato Vegetable.......................................passed
 And Added items to cart.....................................................passed
@@ -30,7 +30,7 @@ And User enters an invalid code then click apply............................pass
 Then Error message will show up.............................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Purchasing Items from Search to Place order" name="Forgot to enter the promotion code" time="34.720335">
+<testcase classname="Purchasing Items from Search to Place order" name="Forgot to enter the promotion code" time="34.581012">
 <system-out><![CDATA[Given User is on the application Landing page...............................passed
 When User search for Cucumber Vegetable.....................................passed
 Then "Cucumber" results are displayed.......................................passed
@@ -40,13 +40,13 @@ And User clicks apply without promo code....................................pass
 Then User will get notify to enter a code...................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Purchasing Items from Search to Place order" name="Data tables scenario" time="17.042251">
+<testcase classname="Purchasing Items from Search to Place order" name="Data tables scenario" time="16.940318">
 <system-out><![CDATA[Given User is on the application Landing page...............................passed
 When User search for an items...............................................passed
 Then Results will displayed.................................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Purchasing Items from Search to Place order" name="" time="32.855848">
+<testcase classname="Purchasing Items from Search to Place order" name="" time="32.867694">
 <system-out><![CDATA[Given User is on the application Landing page...............................passed
 When User search for Cucumber Vegetable.....................................passed
 Then "Cucumber" results are displayed.......................................passed
@@ -56,13 +56,13 @@ And User click the proceed button without clicking the agreement............pass
 Then User will see the error message is displayed...........................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Search and Place order" name="Search items and validate results" time="23.958488">
+<testcase classname="Search and Place order" name="Search items and validate results" time="23.548134">
 <system-out><![CDATA[Given User is on the application Landing page...............................passed
 When User search for Cucumber Vegetable.....................................passed
 Then "Cucumber" results are displayed.......................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Search and Place order" name="Search for items and then move to checkout page" time="26.573579">
+<testcase classname="Search and Place order" name="Search for items and then move to checkout page" time="27.005661">
 <system-out><![CDATA[Given User is on the application Landing page...............................passed
 When User search for Brinjal Vegetable......................................passed
 And Added items to cart.....................................................passed
@@ -70,7 +70,7 @@ And User proceeded to checkout page for purchase............................pass
 Then verify selected Brinjal items are displayed in checkout page...........passed
 ]]></system-out>
 </testcase>
-<testcase classname="Search and Place order" name="Search for items and then move to checkout page 2" time="26.575425">
+<testcase classname="Search and Place order" name="Search for items and then move to checkout page 2" time="26.734317">
 <system-out><![CDATA[Given User is on the application Landing page...............................passed
 When User search for Beetroot Vegetable.....................................passed
 And Added items to cart.....................................................passed
@@ -78,7 +78,7 @@ And User proceeded to checkout page for purchase............................pass
 Then verify selected Beetroot items are displayed in checkout page..........passed
 ]]></system-out>
 </testcase>
-<testcase classname="Search and Place order" name="Search for items and then move to checkout page 3" time="26.693897">
+<testcase classname="Search and Place order" name="Search for items and then move to checkout page 3" time="27.20311">
 <system-out><![CDATA[Given User is on the application Landing page...............................passed
 When User search for Tomato Vegetable.......................................passed
 And Added items to cart.....................................................passed
@@ -86,7 +86,7 @@ And User proceeded to checkout page for purchase............................pass
 Then verify selected Tomato items are displayed in checkout page............passed
 ]]></system-out>
 </testcase>
-<testcase classname="Search and Place order" name="Search for items and then move to checkout page 4" time="26.92843">
+<testcase classname="Search and Place order" name="Search for items and then move to checkout page 4" time="26.70159">
 <system-out><![CDATA[Given User is on the application Landing page...............................passed
 When User search for Orange Vegetable.......................................passed
 And Added items to cart.....................................................passed
@@ -94,30 +94,36 @@ And User proceeded to checkout page for purchase............................pass
 Then verify selected Orange items are displayed in checkout page............passed
 ]]></system-out>
 </testcase>
-<testcase classname="Search and Place order" name="User proceed to cart without purchasing an items" time="21.13238">
+<testcase classname="Search and Place order" name="User proceed to cart without purchasing an items" time="20.675888">
 <system-out><![CDATA[Given User is on the application Landing page...............................passed
 When User click the cart....................................................passed
 Then verify the cart is empty...............................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Search and Place order" name="Accessing the Top deals" time="35.122864">
+<testcase classname="Search and Place order" name="Accessing the Top deals" time="35.117896">
 <system-out><![CDATA[Given User is on the application Landing page...............................passed
 When User clicks the Top deals..............................................passed
 Then User go back to the greenkart homepage.................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Search and Place order" name="Accessing the child window" time="31.579752">
+<testcase classname="Search and Place order" name="Accessing the child window" time="32.836543">
 <system-out><![CDATA[Given User is on the application Landing page...............................passed
 When User clicks the flight booking link....................................passed
 Then User go back to the greenkart homepage.................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Search and Place order" name="Comparing the value of the items to the total value" time="54.930551">
+<testcase classname="Search and Place order" name="Comparing the value of the items to the total value" time="54.67188">
 <system-out><![CDATA[Given User is on the application Landing page...............................passed
 When User search for "Corn" to purchase.....................................passed
 And Search for "Banana" to purchase.........................................passed
 And User proceed to purchase the items......................................passed
 Then The items are displayed in checkout page...............................passed
+]]></system-out>
+</testcase>
+<testcase classname="Search and Place order" name="Selecting an item in the homepage" time="20.610649">
+<system-out><![CDATA[Given User is on the application Landing page...............................passed
+When User select an item in the homepage....................................passed
+Then Item should be on cart.................................................passed
 ]]></system-out>
 </testcase>
 </testsuite>

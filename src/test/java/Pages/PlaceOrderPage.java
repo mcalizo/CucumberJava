@@ -125,5 +125,12 @@ By GetQuantity2=By.xpath("//tr[3]//td[3]//p[1]");
 	{
 		return driver.findElement(GetQuantity2);	
 	}	
+	
+By ItemName=By.xpath("//div[@class='cart-preview active']//div//div//li[@class='cart-item']");
+
+	public WebElement getItem()
+	{
+		return driver.findElement(ItemName);
+	}
 
 }

@@ -55,7 +55,11 @@ Given User is on the application Landing page
 When User select an item in the homepage 
 Then Item should be on cart  
 
-
+@Test13
+Scenario: Sorting the vegetables in topdeals page
+Given User is on the application Landing page
+When User access the Top deals  
+Then display the vegetables in the results 
 
 
 

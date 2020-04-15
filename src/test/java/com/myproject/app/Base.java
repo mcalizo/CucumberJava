@@ -28,7 +28,6 @@ public class Base {
         System.out.println(driver.getTitle());
         System.out.println(driver.getCurrentUrl());
         driver.manage().deleteAllCookies();
-        //driver.close();
         return driver;
                      
         

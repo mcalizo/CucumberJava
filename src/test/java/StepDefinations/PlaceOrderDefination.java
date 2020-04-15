@@ -21,6 +21,8 @@ public class PlaceOrderDefination extends Base {
 
 	HomePage h;
 	PlaceOrderPage PO;
+	
+	
 
 	@And("^User proceeded to place order page$")
 	public void user_proceeded_to_place_order_page() throws Throwable {

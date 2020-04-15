@@ -10,80 +10,86 @@ public class Hooks extends Base{
 	@After("@Test1")
 	public void AfterTest1()
 	{
-		driver.close();
+		driver.quit();
 		
 	}
 	
 	@After("@Test2")
 	public void AfterTest2()
 	{
-		driver.close();
+		driver.quit();
 		
 	}
 	
 	@After("@Test3")
 	public void AfterTest3()
 	{
-		driver.close();
+		driver.quit();
 		
 	}
 	
 	@After("@Test4")
 	public void AfterTest4()
 	{
-		driver.close();
+		driver.quit();
 		
 	}
 	
 	@After("@Test5")
 	public void AfterTest5()
 	{
-		driver.close();
+		driver.quit();
 		
 	}
 	
 	@After("@Test6")
 	public void AfterTest6()
 	{
-		driver.close();
+		driver.quit();
 		
 	}
 	
 	@After("@Test7")
 	public void AfterTest7()
 	{
-		driver.close();
+		driver.quit();
 		
 	}
 	
 	@After("@Test8")
 	public void AfterTest8()
 	{
-		driver.close();
+		driver.quit();
 	}
 	
 	@After("@Test9")
 	public void AfterTest9()
 	{
-		driver.close();
+		driver.quit();
 	}
 	
 	@After("@Test10")
 	public void AfterTest10()
 	{
-		driver.close();
+		driver.quit();
 	}
 	
 	@After("@Test11")
 	public void AfterTest11()
 	{
-		driver.close();
+		driver.quit();;
 	}
 	
 	@After("@Test12")
 	public void AfterTest12()
 	{
-		driver.close();
+		driver.quit();
+	}
+	
+	@After("@Test13")
+	public void AfterTest13()
+	{
+		driver.quit();
 	}
 		
 }

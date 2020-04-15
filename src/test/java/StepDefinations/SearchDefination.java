@@ -6,11 +6,12 @@ import cucumber.api.java.en.When;
 import cucumber.api.java.en.Then;
 import cucumber.api.junit.Cucumber;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Set;
-import java.util.concurrent.TimeUnit;
 
 import org.junit.runner.RunWith;
 import org.openqa.selenium.By;
@@ -28,6 +29,7 @@ import Pages.TopDealsPage;
 
 @RunWith(Cucumber.class)
 public class SearchDefination extends Base {
+		
 
 	HomePage h;
 	CartPage ct;
@@ -40,7 +42,7 @@ public class SearchDefination extends Base {
 	public void user_is_on_the_application_landing_page() throws Throwable {
 		System.out.println("User is on the landing Page");
 		driver = Base.getDriver();
-		//driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+		
 
 	}
 
@@ -320,7 +322,7 @@ public class SearchDefination extends Base {
 		System.out.println("User select an item in the homepage");
 		h = new HomePage(driver);
 		h.getProductName().isDisplayed();
-		Thread.sleep(3000);
+		//Thread.sleep(3000);
 
 		int j = 0;
 
@@ -362,5 +364,73 @@ public class SearchDefination extends Base {
 		//Assert.assertEquals(true, PO.getItem().getAttribute("class"));
 
 	}
+	
+	@When("^User access the Top deals$")
+    public void user_access_the_top_deals() throws Throwable {
+		h = new HomePage(driver);
+		h.getTopDeals().click();
+		
+		for (String handle : driver.getWindowHandles()) {
+			 
+		    driver.switchTo().window(handle);}
+		 
+		
+    }
+	
+	  @Then("^display the vegetables in the results$")
+	    public void display_the_vegetables_in_the_results() throws Throwable {      
+		  driver.findElement(By.cssSelector("tr th:nth-child(2)")).click();
+		  driver.findElement(By.cssSelector("tr th:nth-child(2)")).click();
+		  
+		  List<WebElement> firstColList= driver.findElements(By.cssSelector("tr td:nth-child(2)"));
+		  
+		  ArrayList<String> originalList=new ArrayList<String>();
+
+		  for(int i=0;i<firstColList.size();i++)
+
+		  {
+
+			  originalList.add(firstColList.get(i).getText());
+
+		  }
+
+		  	ArrayList<String> copiedList =new ArrayList<String>();
+
+
+		  	for(int i=0;i<originalList.size();i++)
+
+		  	{
+
+		  		copiedList.add(originalList.get(i));
+
+		  	}
+
+		  	//string
+
+		  	Collections.sort(copiedList);
+		  	// Collections.reverse(copiedList);
+		  	for(String s1:originalList )
+		  	{
+		  		System.out.println(s1);
+
+		  	}
+
+		  	System.out.println("*******************");
+
+		  	for(String s2:copiedList )
+
+		  	{
+
+		  		System.out.println(s2);
+
+		  	}
+
+		  	Assert.assertTrue(originalList.equals(copiedList));
+
+	  		}
+ 
 
 }
+
+
+
